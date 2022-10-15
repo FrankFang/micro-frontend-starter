@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev": "pnpm -C ./pkg/container dev",
+    "rm:node_modules": "rm -rf node_modules **/*/node_modules"
+  },
+	"devDependencies": {
+		"typescript": "4.8.4"
+	}
+}
