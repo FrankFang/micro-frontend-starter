@@ -3,12 +3,16 @@ import type { App as TypeApp } from 'vue'
 import App from './App.vue'
 
 let app: TypeApp | null = null
-// @ts-ignore
-window['app1'] = {
-  create: () => { },
+window.apps = window.apps || {}
+window.apps['app1'] = {
+  create: () => {
+    console.log('app1 create')
+  },
   mount: (container: HTMLElement) => {
+    console.log('app1 mount')
     app = createApp(App)
     app.mount(container)
+    console.log('Container', container)
   },
   unmount: () => {
     if (!app) { return }

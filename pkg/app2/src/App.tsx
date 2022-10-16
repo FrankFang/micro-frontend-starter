@@ -1,6 +1,6 @@
 function App() {
   return (
-    <div className="App">React 应用12345</div>
+    <div className="App">React 应用</div>
   )
 }
 

@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 
 let app: ReactDOM.Root | null = null
-// @ts-ignore
-window['app2'] = {
+window.apps = window.apps || {}
+window.apps['app2'] = {
   create: () => { },
   mount: (container: HTMLElement) => {
     app = ReactDOM.createRoot(container)
