@@ -4,7 +4,7 @@ import App from './App.vue'
 
 let app: TypeApp | null = null
 window.apps = window.apps || {}
-window.apps['app1'] = {
+window.apps.app1 = {
   create: () => {
     console.log('app1 create')
   },
@@ -15,8 +15,9 @@ window.apps['app1'] = {
     console.log('Container', container)
   },
   unmount: () => {
-    if (!app) { return }
+    if (!app)
+      return
     app.unmount()
     app = null
-  }
+  },
 }

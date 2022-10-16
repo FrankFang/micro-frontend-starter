@@ -5,3 +5,14 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+
+
+interface Manifest {
+  [filename: string]: {
+    file: string;
+    src: string;
+    css?: string[];
+    isEntry?: boolean;
+    isDynamicEntry?: boolean;
+  }
+}

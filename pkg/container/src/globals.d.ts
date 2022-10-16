@@ -7,3 +7,4 @@ interface Window {
     };
   }
 }
+var isDev: boolean

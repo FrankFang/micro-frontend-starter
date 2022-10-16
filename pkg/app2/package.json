@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --port 5175",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --port 4175"
   },
   "dependencies": {
     "react": "^18.2.0",
