@@ -1,9 +1,8 @@
-import { createMicroApp, MicroApp } from './components/MicroApp';
-import { NotFound } from './components/NotFound';
-import { registerApp, microApps, activeMicroApps, setActive } from './lib/micro';
 import { createRouter, createWebHashHistory } from 'vue-router'
-import { Container } from './components/Container';
-import { createApp } from 'vue';
+import { createApp } from 'vue'
+import { createMicroApp } from './components/MicroApp'
+import { NotFound } from './components/NotFound'
+import { Container } from './components/Container'
 
 const routes = [
   { path: '/', component: NotFound },
@@ -11,16 +10,16 @@ const routes = [
     path: '/app1',
     component: createMicroApp({
       name: 'app1',
-      entry: "http://localhost:5174/src/main.ts"
-    })
+      entry: 'http://localhost:5174/src/main.ts',
+    }),
   },
   {
     path: '/app2',
     component: createMicroApp({
       name: 'app2',
-      beforeEntry: "http://localhost:5175/src/hmr.tsx",
-      entry: "http://localhost:5175/src/main.tsx"
-    })
+      beforeEntry: 'http://localhost:5175/src/hmr.tsx',
+      entry: 'http://localhost:5175/src/main.tsx',
+    }),
   },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
@@ -49,7 +48,6 @@ app.mount('#container')
 //     activePath: '/'
 //   },
 // )
-
 
 // window.addEventListener('hashchange', run)
 
