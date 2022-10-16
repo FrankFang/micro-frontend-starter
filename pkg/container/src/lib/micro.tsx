@@ -1,6 +1,7 @@
 interface MicroApp {
   name: string
   entry: string // 示例：xxx.js
+  beforeEntry?: string[]
   containerId: string
   activePath: string // 示例：/app-1
 }

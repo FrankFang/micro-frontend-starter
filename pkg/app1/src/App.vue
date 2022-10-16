@@ -5,10 +5,7 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <h1>
-  我是第一个应用
-  <a href="#/app2">jump</a>
-  </h1>
+  <div>Vue 应用</div>
 </template>
 
 <style scoped>
