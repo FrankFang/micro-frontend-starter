@@ -11,7 +11,7 @@ const routes = [
     component: createMicroApp({
       name: 'app1',
       entry: isDev
-        ? 'http://localhost:5174/src/main.tsx'
+        ? 'http://localhost:5174/src/entry.tsx'
         : 'http://localhost:4174/manifest.json',
     }),
   },
@@ -23,7 +23,7 @@ const routes = [
         ? 'http://localhost:5175/src/hmr.tsx'
         : undefined,
       entry: isDev
-        ? 'http://localhost:5175/src/main.tsx'
+        ? 'http://localhost:5175/src/entry.tsx'
         : 'http://localhost:4175/manifest.json',
     }),
   },

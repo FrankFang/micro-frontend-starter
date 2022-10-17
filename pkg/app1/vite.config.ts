@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     manifest: true,
     rollupOptions: {
-      input: './index.js',
+      input: './src/entry.tsx',
     },
   },
 })

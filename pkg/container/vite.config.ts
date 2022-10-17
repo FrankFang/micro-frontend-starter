@@ -4,7 +4,6 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode, ssrBuild }) => {
-  console.log(command, mode)
   return {
     define: {
       isDev: JSON.stringify(mode === 'development'),
