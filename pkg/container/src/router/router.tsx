@@ -26,6 +26,15 @@ const routes = [
         : 'http://localhost:4175/manifest.json',
     }),
   },
+  {
+    path: '/app3',
+    component: createMicroApp({
+      name: 'app3',
+      entry: isDev
+        ? 'http://localhost:5176/src/entry.tsx'
+        : 'http://localhost:4176/manifest.json',
+    }),
+  },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
 

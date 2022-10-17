@@ -16,6 +16,9 @@ export const Container = defineComponent({
             <li>
               <RouterLink to="/app2">App 2 (React)</RouterLink>
             </li>
+            <li>
+              <RouterLink to="/app3">App 3 (Vue)</RouterLink>
+            </li>
           </ul>
         </nav>
         <main class={s.main}>
