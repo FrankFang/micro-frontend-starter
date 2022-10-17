@@ -8,6 +8,8 @@
 pnpm run -r dev
 ```
 
+open http://localhost:5173
+
 ## 已知问题
 
 - HMR 功能有问题，只有一个应用能够正常热更新，其他应用需要手动刷新页面。
@@ -20,3 +22,4 @@ pnpm run -r build
 pnpm run -r preview
 ```
 
+open http://localhost:4173
