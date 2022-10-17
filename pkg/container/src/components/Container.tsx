@@ -11,7 +11,7 @@ export const Container = defineComponent({
               <RouterLink to="/">Home</RouterLink>
             </li>
             <li>
-              <RouterLink to="/app1">App 12345 (Vue)</RouterLink>
+              <RouterLink to="/app1">App 1 (Vue)</RouterLink>
             </li>
             <li>
               <RouterLink to="/app2">App 2 (React)</RouterLink>

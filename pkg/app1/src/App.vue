@@ -5,7 +5,7 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div>Vue 应用3</div>
+  <div>Vue 应用</div>
 </template>
 
 <style scoped>
