@@ -19,7 +19,7 @@ const routes = [
     component: createMicroApp({
       name: 'app2',
       beforeEntry: isDev
-        ? 'http://localhost:5175/src/hmr.tsx'
+        ? 'http://localhost:5175/src/hmr.js'
         : undefined,
       entry: isDev
         ? 'http://localhost:5175/src/entry.tsx'

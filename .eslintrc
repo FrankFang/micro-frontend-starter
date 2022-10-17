@@ -2,6 +2,7 @@
   "extends": "@antfu",
   "rules": {
     "curly": "off",
+    "jsonc/sort-keys": "off",
     "arrow-parens": ["error", "as-needed"],
     "@typescript-eslint/no-unused-vars": [
       "error",
