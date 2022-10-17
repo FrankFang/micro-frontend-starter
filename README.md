@@ -10,7 +10,7 @@ pnpm run -r dev
 
 ## 已知问题
 
-- 最外层 container 的 hmr 功能无法使用，需要手动刷新页面。（怀疑是因为子应用的 hmr 与 container 的 hmr 冲突了）
+- HMR 功能有问题，只有一个应用能够正常热更新，其他应用需要手动刷新页面
 
 ## 部署
 ```bash
