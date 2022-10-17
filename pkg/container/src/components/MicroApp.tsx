@@ -24,10 +24,12 @@ export const MicroApp = defineComponent({
   },
   setup: ({ beforeEntry, entry, name }, context) => {
     const div = ref<HTMLDivElement>()
+    const unmounted = ref(false)
     onMounted(async () => {
+      unmounted.value = false
       if (beforeEntry) {
         (typeof beforeEntry === 'string' ? [beforeEntry] : beforeEntry)
-          .forEach((url) => {
+          .forEach(url => {
             createScript(url)
           })
       }
@@ -44,11 +46,13 @@ export const MicroApp = defineComponent({
         if (!match) { return }
         await createScript(match[0] + item.file)
       }
+      if (unmounted.value) { return }
       window.apps[name].create()
       window.apps[name].mount(div.value!)
     })
     onUnmounted(() => {
-      window.apps[name].unmount()
+      window.apps?.[name]?.unmount()
+      unmounted.value = true
     })
     return () => (
       <div ref={div} />

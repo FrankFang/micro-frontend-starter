@@ -1,24 +1,27 @@
-import { defineComponent, PropType } from 'vue';
+import { defineComponent } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
+import s from './Container.module.scss'
 export const Container = defineComponent({
-  props: {
-    name: {
-      type: String as PropType<string>
-    }
-  },
   setup: (props, context) => {
     return () => (
-      <div>
-        <ol>
-          <li>
-            <RouterLink to="/app1">app1</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/app2">app2</RouterLink>
-          </li>
-        </ol>
-        <RouterView />
+      <div class={s.wrapper}>
+        <nav class={s.nav}>
+          <ul>
+            <li>
+              <RouterLink to="/">Home</RouterLink>
+            </li>
+            <li>
+              <RouterLink to="/app1">App 12345 (Vue)</RouterLink>
+            </li>
+            <li>
+              <RouterLink to="/app2">App 2 (React)</RouterLink>
+            </li>
+          </ul>
+        </nav>
+        <main class={s.main}>
+          <RouterView />
+        </main>
       </div>
     )
-  }
+  },
 })
