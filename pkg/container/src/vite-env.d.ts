@@ -16,3 +16,4 @@ interface Manifest {
     isDynamicEntry?: boolean;
   }
 }
+

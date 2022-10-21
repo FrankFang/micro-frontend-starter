@@ -1,7 +1,10 @@
 import { createApp } from 'vue'
-import { Container } from './components/Container'
+import { App } from './App'
 import { router } from './router/router'
+import '@unocss/reset/tailwind.css'
+import 'uno.css'
+import './global.scss'
 
-const app = createApp(Container)
+const app = createApp(App)
 app.use(router)
 app.mount('#container')
